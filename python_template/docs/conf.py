@@ -9,6 +9,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
+sys.path.append(os.path.abspath(os.path.join(__file__, "../../python_template")))
 
 project = 'template'
 copyright = '2023, solenopsis'
