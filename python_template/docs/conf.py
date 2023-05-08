@@ -18,18 +18,10 @@ release = '1.0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon', 'sphinx.ext.viewcode', 'myst_parser', 'sphinxcontrib.plantuml', 'sphinx_needs']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon', 'sphinx.ext.viewcode', 'myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-# -- PlantUML ---------------------------------------------------
-on_rtd = os.environ.get('READTHEDOCS') == 'True'
-if on_rtd:
-    plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
-else:
-    plantuml = 'java -jar %s' % os.path.join(os.path.dirname(__file__), "utils", "plantuml.jar")
-    plantuml_output_format = 'png'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
